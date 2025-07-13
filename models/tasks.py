@@ -8,6 +8,7 @@ class TasksModel(BaseModel):
     """Model for task data."""
 
     name: str
+    created_at: str
     priority: Optional[str]
     deadline: Optional[str]
     status: Optional[str] = None

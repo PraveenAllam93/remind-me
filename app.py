@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from api.api_v1.api import api_router
-from config.openai_client import openai_client
+from config.openai_config import openai_client
+from config.redis_config import pool
 from config.settings import settings
 from logs import setup_logging
 

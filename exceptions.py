@@ -28,3 +28,7 @@ class BaseCustomException(Exception):
 
 class TaskServiceException(BaseCustomException):
     pass
+
+
+class RedisServiceException(BaseCustomException):
+    pass

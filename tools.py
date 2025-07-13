@@ -16,6 +16,11 @@ create_task_tools = {
                             "type": "string",
                             "description": "The name of the task.",
                         },
+                        "created_at": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The time at which task was created",
+                        },
                         "priority": {
                             "type": ["string", "null"],
                             "enum": ["low", "medium", "high"],
@@ -23,10 +28,10 @@ create_task_tools = {
                         },
                         "deadline": {
                             "type": ["string", "null"],
-                            "description": "Optional deadline for the task defaulting to null.",
+                            "description": "Optional deadline utc time for the task defaulting to one week.",
                         },
                     },
-                    "required": ["name", "priority", "deadline"],
+                    "required": ["name", "created_at", "priority", "deadline"],
                     "additionalProperties": False,
                 },
             }
